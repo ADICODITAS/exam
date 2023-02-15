@@ -11,6 +11,7 @@ def sum_numbers_in_file(deli):
             numbers = i.strip().split(deli)
             print(numbers)
             for number in numbers:
-                total += int(number)
+                if number.isnumeric():
+                    total += int(number)
     print(total)
 sum_numbers_in_file(deli)
